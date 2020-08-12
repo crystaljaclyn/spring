@@ -1,0 +1,23 @@
+pring:
+  application:
+   name: APIGateway
+server:
+  port: 8080
+
+eureka:
+  client:
+   serviceUrl:
+    defaultZone: http://localhost:9091/eureka
+
+zuul:
+  host:
+   socket-timeout-millis: 30000
+  routes:
+    employeeUI:
+      serviceId: EmployeeDashBoard
+security:
+  basic:
+   enable: false
+management:
+  security:
+   enabled: false
